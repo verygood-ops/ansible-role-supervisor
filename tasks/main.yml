@@ -4,9 +4,8 @@
 
 - name: Ensure Supervisor is installed (specific version).
   apt:
-    name: supervisor
+    name: "supervisor={{ supervisor_version }}"
     state: present
-    version: "{{ supervisor_version }}"
 
 - name: Ensure Supervisor log dir exists.
   file:
